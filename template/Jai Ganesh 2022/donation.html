@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+   {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'donation.css' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    
+    .mb-3 .required:after{
+      content: *;
+      color: red;
+    }
+  </style>
+</head>
+<div id="head" style="background-color:orange;">
+  <center id="cen"><img id ="first"src="{% static 'images\ganesh image 2.jpg' %}"><img id ="sec"src="{% static 'images\seetha.jpg' %}"></center>
+<center><h1 id="h">sree seetha rama vinayaka utsava samithi</h1></center>
+  </div>
+</head>
+<body style="background-color: orange;">
+  
+<header id ="header" style="background-color:orange;">
+  
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home'%}">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Disclaimer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'donate' %}">Donate Chandha</a>
+        </li>  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'pooj' %}">poojaevents</a></li>
+            <li><a class="dropdown-item" href="{% url 'cul' %}">Cultural events</a></li>
+            <li><a class="dropdown-item" href="#">Fun Events</a></li>
+          </ul>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'live' %}">Live</a>
+        </li> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'list' %}">GotramList</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'pooja' %}">Book Pooja</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container mt-3" style ="margin-top: 3%!important;">
+  <h2>Donate Chandha</h2>
+  <form action="#" method="post">
+    {%csrf_token%}
+    <div class="mb-3 mt-3">
+      <label for="name">Gothram:</label >
+      <input type="name" class="form-control" id="name" placeholder="Enter Gothram" name="Gothram" required="true">
+    </div>
+    <div class="mb-3">
+      <label  for="name">LastName</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter LastName" name="LastName" required>
+    </div>
+    <div class="mb-3">
+      <label  for="name">FirstName</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter FirstName" name="FirstName" required>
+    </div>
+    <div class="mb-3">
+      <label  for="name">Spouce Name</label>
+      <input type="name" class="form-control" id="name" placeholder="Spoucename" name="SpouceName">
+    </div>
+    <div class="mb-3">
+      <label  for="name">Child1</label>
+      <input type="name" class="form-control" id="name" placeholder="Child1" name="Child1">
+    </div>
+    <div class="mb-3">
+      <label  for="name">Child2</label>
+      <input type="name" class="form-control" id="name" placeholder="Child2" name="Child2">
+    </div>
+    <div class="mb-3">
+      <label  for="quantity">Amount</label>
+<input type="number" id="quantity" name="Amount" min="116" max="500000000000000000000">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+</body>
