@@ -44,14 +44,15 @@ INSTALLED_APPS = [
 ]
 CORS_ORIGIN_ALLOW_ALL=True
 
-
+WSGI_APPLICATION='ganesh2022.wsgi.application'
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'ganesh2022.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template'],
+        'DIRS': [os.path.join(BASE_DIR,'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,4 +142,8 @@ STATICFILES_DIRS = [
 
 
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT=BASE_DIR/'staticfiles'
+ENABLE_ORYX_BUILD = True

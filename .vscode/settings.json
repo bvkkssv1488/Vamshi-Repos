@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b3fb5f3e-fb6b-4106-9b2a-4d129762271f/microsoft.web/sites/subscriptions/b3fb5f3e-fb6b-4106-9b2a-4d129762271f/resourceGroups/appsvc_linux_centralus_premium/providers/Microsoft.Web/sites/seetharama",
+    "appService.deploySubpath": "."
+}
