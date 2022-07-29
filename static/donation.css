@@ -104,6 +104,7 @@ input[type=number] {
     }
 .container{
  background-color: whitesmoke;
+ align-self: center;
 
 }
 #carouselExampleControls{

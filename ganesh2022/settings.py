@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-&@cir7^udl=790i^vgvikl1v=6-_#ur&0qr_5*x@6t=v2lplp3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['seetharama.azurewebsites.net','127.0.0.1']
+
 
 
 # Application definition
@@ -42,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-CORS_ORIGIN_ALLOW_ALL=True
+
 
 WSGI_APPLICATION='ganesh2022.wsgi.application'
 MIDDLEWARE = [
@@ -55,10 +56,13 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'httpxforwardedfor.middleware.HttpXForwardedForMiddleware',
 ]
-
+CORS_ORIGIN_ALLOW_ALL=True
 ROOT_URLCONF = 'ganesh2022.urls'
-
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+TRUST_ONLY_HTTPS_PROXY = True
+TRUSTED_PROXY_IPS=['*']
 
 TEMPLATES = [
     {

@@ -16,9 +16,13 @@ def function1(request):
 
 def cultural(request):
 	return render(request,'Jai Ganesh 2022/cultural.html')
+def contactus(request):
+	return render(request,'Jai Ganesh 2022/contactus.html')
 	
 def live(request):
 	return render(request,'Jai Ganesh 2022/live.html')
+def payment(request):
+	return render(request,'Jai Ganesh 2022/payment.html')
 def list1(request):
     list1=Donation.objects.all()
     return render(request,'Jai Ganesh 2022/gotramlist.html',{'list':list1})
@@ -66,7 +70,7 @@ def poojaevents(request):
  return render(request,'Jai Ganesh 2022/bookpooja.html')
 
 def index(request):
-    return render(request, 'Jai Ganesh 2022/live')
+    return render(request, 'Jai Ganesh 2022/live.html')
 
 #Every time you call the phone and laptop camera method gets frame
 #More info found in camera.py

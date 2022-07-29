@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import helloworld,function,function1,live,cultural,donation,list1,poojaevents,index,video_feed,list2,livecam_feed
+from .views import helloworld,function,function1,live,cultural,donation,list1,poojaevents,index,video_feed,list2,livecam_feed,contactus,payment
 
 urlpatterns = [
     path('home/', helloworld,name='home'),
@@ -14,6 +14,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('video_feed', video_feed, name='video_feed'),
     path('livecam_feed', livecam_feed, name='livecam_feed'),
-
+    path('contactus', contactus, name='contact'),
+    path('payment', payment, name='payment'),
 ]
 
