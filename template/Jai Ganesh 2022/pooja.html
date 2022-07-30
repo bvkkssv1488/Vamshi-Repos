@@ -16,7 +16,7 @@
     }
     
     .mb-3 .required:after{
-      content: *;
+      content: '*';
       color: red;
     }
     table {
@@ -41,7 +41,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 </head>
 <body>
   
-<header id ="header" style="background-color:orange;">
+<header id ="header" >
   
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -63,7 +63,6 @@ tr:nth-child(even){background-color: #f2f2f2}
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{% url 'pooj' %}">poojaevents</a></li>
               <li><a class="dropdown-item" href="{% url 'cul' %}">Cultural events</a></li>
-              
             </ul>
             <li class="nav-item">
             <a class="nav-link" href="{% url 'live' %}">Live</a>
@@ -83,22 +82,9 @@ tr:nth-child(even){background-color: #f2f2f2}
     </div>
   </nav>
 </header>
-<div class="container-fluid" id="somthing">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
-         <ul class="dropdown-menu">
-            <li><button class="dropdown-item" onclick="myfunction('2022-08-31')" formmethod="post">2022-08-31</button></li>
-            <li><button class="dropdown-item" onclick="myfunction('2022-09-01')"formmethod="post">2022-09-01</button></li>
-            <li><button class="dropdown-item" onclick="myfunction('2022-09-03')"formmethod="post">2022-09-03</button></li>
-            <li><button class="dropdown-item" onclick="myfunction('2022-09-04')"formmethod="post">2022-09-04</button></li>
-            <li><button class="dropdown-item" onclick="myfunction('2022-09-05')"formmethod="post">2022-09-05</button></li>
-            <li><button class="dropdown-item" onclick="myfunction('2022-09-06')"formmethod="post">2022-09-06</button></li>
-            <li><button class="dropdown-item" onclick="myfunction('2022-09-07')"formmethod="post">2022-09-07</button></li>
-            <li><button class="dropdown-item" onclick="myfunction('2022-09-08')"formmethod="post">2022-09-08</button></li>
-            <li><button class="dropdown-item" onclick="myfunction('2022-09-09')"formmethod="post">2022-09-09</button></li>
-          </ul>
-      </div>
-<div style="overflow-x:auto;"id="s">
-  <table id ="hi">
+
+<div style="overflow-x:auto;">
+  <table id ="hi" >
     <thead>
     <tr>
       <th>Gothram</th>
@@ -132,16 +118,5 @@ tr:nth-child(even){background-color: #f2f2f2}
   </table>
 
 </div>
-<script type="text/javascript">
-  function myfunction(v) {
-   
-   document.getElementById("s").style.display = "block";// body...
-  }
-  function closefunction(){
-    document.getElementById("s").style.display = "None";// body...
-  }
-  
-
-</script>
 </body>
 </html>

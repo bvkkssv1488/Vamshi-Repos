@@ -6,13 +6,9 @@
 	margin-left: 0%;
 	margin-right: 20%;
 }
-.dropdown-menu{
-	left: 50%;
-}
 #s{
-	display: none;
+	display: block;
   bottom: 0;
   align-self: center;
   border: 3px solid #f1f1f1;
-  z-index: 9;
 }

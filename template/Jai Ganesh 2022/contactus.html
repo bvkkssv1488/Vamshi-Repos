@@ -23,7 +23,7 @@
 }
     
     .mb-3 .required:after{
-      content: *;
+      content: '*';
       color: red;
     }
   </style>
@@ -86,15 +86,22 @@
     .button:hover {
       background-color: #555;
     }
-    
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 958px) {
+      .card {
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    margin: 15px;
+    background-color: black;
+      }
+    }
+    @media screen and (max-width: 600px) {
       .column {
         width: 100%;
         display: block;
         float: left;
-        margin-left: -2%;
+        margin-left: 0%;
       }
     }
+   
     </style>
 </head>
 <div id="head" style="background-color:orange;">
@@ -156,7 +163,7 @@
   <div class="row">
     <div class="column">
       <div class="card">
-        <img src="/w3images/team1.jpg">
+        <img src="{% static 'images\sreenu.jpeg' %}">
         <div class="container">
           <h2>Nanduri Srinivas</h2>
           <p class="title"></p>
@@ -182,9 +189,9 @@
     
     <div class="column">
       <div class="card">
-        <img src="/w3images/team3.jpg">
+        <img src="{% static 'images\abhi.jpeg' %}">
         <div class="container">
-          <h2>Big-Abhishek</h2>
+          <h2>Ivaturi Abhishek</h2>
           <p class="title"></p>
           <p></p>
           <p>+91 9989819573</p>
@@ -209,12 +216,12 @@
 
 <div class="column">
   <div class="card">
-    <img src="{% static 'images\sai.jpeg' %}" >
+    <img src="{% static 'images\bm.jpeg' %}" >
     <div class="container">
-      <h2>T Nishanth Ranga Sai</h2>
+      <h2>B M Vamshi Krishna</h2>
       <p class="title"></p>
       <p></p>
-      <p>+91 8106300588</p>
+      <p>+91 9985417164</p>
       <p><button class="button">Contact</button></p>
     </div>
   </div>
